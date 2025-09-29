@@ -8,26 +8,31 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State var email = ""
-    @State var password = ""
+//    @State var email = ""
+//    @State var password = ""
+    
+   @StateObject var viewModel = LoginViewModel()
+    
     
     var body: some View {
         NavigationStack {
            HeaderView()
             Form{
-               TextField("Email", text: $email)
-                SecureField("Password", text: $password)
-            }.frame(height: 150)
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 5)
-                        .foregroundStyle(.primary)
-                    Text("Enter")
-                        .foregroundStyle(.white)
+                if !viewModel.errorMessage.isEmpty {
+                    Text(viewModel.errorMessage)
+                        .foregroundStyle(.red)
                 }
+                Section(header: Text("Login")) {
+                    TextField("Email", text: $viewModel.email)
+                        .autocorrectionDisabled()
+                        .autocapitalization(.none)
+                    SecureField("Password", text: $viewModel.password)
+                }
+            }.frame(height: 170)
+            BigButton(title: "Login", action: {
+                viewModel.login()
             })
-            .frame(height: 40)
-            .padding(.horizontal)
+           
             Spacer()
             
             VStack{

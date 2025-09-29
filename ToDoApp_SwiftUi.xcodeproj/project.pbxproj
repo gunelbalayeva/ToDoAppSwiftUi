@@ -56,6 +56,8 @@
 		CE200F1D2E8915AA00CD06A5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE200F1C2E8915AA00CD06A5 /* LoginViewModel.swift */; };
 		CE200F1F2E8915E600CD06A5 /* NewItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE200F1E2E8915E600CD06A5 /* NewItemViewModel.swift */; };
 		CE200F222E8926BF00CD06A5 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE200F212E8926BF00CD06A5 /* HeaderView.swift */; };
+		CEA317342E8A675D00571CED /* BigButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA317332E8A675D00571CED /* BigButtonView.swift */; };
+		CEA317372E8AB43500571CED /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA317362E8AB43500571CED /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +83,8 @@
 		CE200F1C2E8915AA00CD06A5 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CE200F1E2E8915E600CD06A5 /* NewItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemViewModel.swift; sourceTree = "<group>"; };
 		CE200F212E8926BF00CD06A5 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		CEA317332E8A675D00571CED /* BigButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButtonView.swift; sourceTree = "<group>"; };
+		CEA317362E8AB43500571CED /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,7 @@
 		CE200DE52E69DDB800CD06A5 /* ToDoApp_SwiftUi */ = {
 			isa = PBXGroup;
 			children = (
+				CEA317352E8AB41500571CED /* Extension */,
 				CE200F202E8926AC00CD06A5 /* Utilities */,
 				CE200EFF2E86E45800CD06A5 /* ViewModels */,
 				CE200EFE2E86E45000CD06A5 /* Models */,
@@ -187,6 +192,7 @@
 				CE200F082E89142B00CD06A5 /* RegisterView.swift */,
 				CE200F0A2E89144D00CD06A5 /* ToDoListView.swift */,
 				CE200F0C2E89145A00CD06A5 /* ToDoListItemView.swift */,
+				CEA317332E8A675D00571CED /* BigButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -220,6 +226,14 @@
 				CE200F212E8926BF00CD06A5 /* HeaderView.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CEA317352E8AB41500571CED /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CEA317362E8AB43500571CED /* Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +343,7 @@
 				CE200F192E89157D00CD06A5 /* ToDoListViewModel.swift in Sources */,
 				CE200F222E8926BF00CD06A5 /* HeaderView.swift in Sources */,
 				CE200F112E8914AA00CD06A5 /* ToDoListItem.swift in Sources */,
+				CEA317342E8A675D00571CED /* BigButtonView.swift in Sources */,
 				CE200F072E89141400CD06A5 /* LoginView.swift in Sources */,
 				CE200F032E8913EC00CD06A5 /* ProfileView.swift in Sources */,
 				CE200F1D2E8915AA00CD06A5 /* LoginViewModel.swift in Sources */,
@@ -340,6 +355,7 @@
 				CE200F172E89156F00CD06A5 /* RegisterViewModel.swift in Sources */,
 				CE200F1B2E89159400CD06A5 /* ToDoListItemViewModel.swift in Sources */,
 				CE200F1F2E8915E600CD06A5 /* NewItemViewModel.swift in Sources */,
+				CEA317372E8AB43500571CED /* Extension.swift in Sources */,
 				CE200F0D2E89145A00CD06A5 /* ToDoListItemView.swift in Sources */,
 				CE200F0F2E89148500CD06A5 /* User.swift in Sources */,
 				CE200F052E89140800CD06A5 /* NewItemView.swift in Sources */,
