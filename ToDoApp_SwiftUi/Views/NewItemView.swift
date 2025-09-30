@@ -8,11 +8,28 @@
 import SwiftUI
 
 struct NewItemView: View {
+    @Binding var newItemPresented:Bool
+    @StateObject var viewModel = NewItemViewModel()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Yeni is") .font(.title).bold() .padding(.top , 40)
+            Form{
+                TextField ("Basliq" , text: $viewModel.title)
+                DatePicker("Bitme tarixi", selection: $viewModel.dueDate)
+                    .datePickerStyle(.graphical)
+                BigButton(title: "Save", action: {
+                    viewModel.save()
+                    newItemPresented  = false
+                })
+            }
+        }
     }
 }
 
 #Preview {
-    NewItemView()
+    NewItemView(newItemPresented: Binding(get: {
+        return true
+    }, set: { _ in
+        
+    }))
 }

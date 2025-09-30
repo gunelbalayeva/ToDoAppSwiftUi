@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct RegisterView: View {
-    //    @State var name = ""
-    //    @State var surname = ""
-    //    @State var password = ""
+
     @StateObject var viewModel = RegisterViewModel()
     
     var body: some View {
@@ -25,12 +23,13 @@ struct RegisterView: View {
                     Section(header: Text("Register")) {
                         TextField("Your name",text: $viewModel.name )
                             .autocorrectionDisabled()
-                        TextField("Your email", text: $viewModel.email)
+                        TextField("excample@gmail.com", text: $viewModel.email)
                             .autocorrectionDisabled()
                             .autocapitalization(.none)
-                        SecureField("Your password",text: $viewModel.password)
+                        SecureField("123456",text: $viewModel.password)
+                            .foregroundStyle(.red)
                     }
-                } .frame(height: 250)
+                } .frame(height: 245)
                 BigButton(title: "Register", action: {
                     viewModel.register()
                 })
@@ -39,7 +38,7 @@ struct RegisterView: View {
                 VStack{
                     Text("Already have an account?")
                     NavigationLink("Login", destination: LoginView())
-                } .padding(.bottom, 20)
+                } .padding(.bottom, 16)
                 
             }
         }
