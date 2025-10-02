@@ -192,7 +192,6 @@
 				CE200F082E89142B00CD06A5 /* RegisterView.swift */,
 				CE200F0A2E89144D00CD06A5 /* ToDoListView.swift */,
 				CE200F0C2E89145A00CD06A5 /* ToDoListItemView.swift */,
-				CEA317332E8A675D00571CED /* BigButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,6 +222,7 @@
 		CE200F202E8926AC00CD06A5 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				CEA317332E8A675D00571CED /* BigButtonView.swift */,
 				CE200F212E8926BF00CD06A5 /* HeaderView.swift */,
 			);
 			path = Utilities;

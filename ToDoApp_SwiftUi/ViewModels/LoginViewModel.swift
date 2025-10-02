@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseAuth
 class LoginViewModel :ObservableObject {
     @Published var email = ""
     @Published var password = ""
@@ -17,7 +18,7 @@ class LoginViewModel :ObservableObject {
         guard validate() else{
             return
         }
-       
+        Auth.auth().signIn(withEmail: email,password: password)
     }
     
     func validate() -> Bool{

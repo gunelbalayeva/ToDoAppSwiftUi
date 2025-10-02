@@ -18,10 +18,17 @@ struct NewItemView: View {
                 DatePicker("Bitme tarixi", selection: $viewModel.dueDate)
                     .datePickerStyle(.graphical)
                 BigButton(title: "Save", action: {
-                    viewModel.save()
-                    newItemPresented  = false
+                    if viewModel.canSave {
+                        viewModel.save()
+                        newItemPresented  = false
+                    } else {
+                        viewModel.showAlert = true
+                    }
                 })
             }
+            .alert(isPresented: $viewModel.showAlert, content: {
+                Alert(title:Text( "Xeta"),message: Text("Duzgun melumat daxil edin"))
+            })
         }
     }
 }
