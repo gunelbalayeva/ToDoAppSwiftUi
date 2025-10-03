@@ -35,8 +35,3 @@ A simple and functional **ToDo List app** built with **SwiftUI** and integrated 
 - **Firebase Auth** – user authentication
 - **Firebase Firestore** – cloud database
 - **Combine** – reactive data handling
-
----
-
-##  Screenshots
-*(Add screenshots of Login, Register, Profile, and ToDo List pages here)*
